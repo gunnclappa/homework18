@@ -43,10 +43,10 @@ public class TestBase {
 //        AllureAttachments.attachNetwork(); // todo
         AllureAttachments.addBrowserConsoleLogs();
 
+        Selenide.closeWebDriver();
+
         if (Project.isVideoOn()) {
             AllureAttachments.addVideo(sessionId);
         }
-
-        Selenide.closeWebDriver();
     }
 }
