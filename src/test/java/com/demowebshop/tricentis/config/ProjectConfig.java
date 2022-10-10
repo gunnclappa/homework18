@@ -13,7 +13,7 @@ public interface ProjectConfig extends Config {
     @DefaultValue("chrome")
     String browser();
 
-    @DefaultValue("100")
+    @DefaultValue("100.0")
     String browserVersion();
 
     @DefaultValue("1920x1080")
