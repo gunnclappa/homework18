@@ -1,6 +1,7 @@
 package com.demowebshop.tricentis.tests;
 
 import com.codeborne.selenide.WebDriverRunner;
+import com.demowebshop.tricentis.helpers.AllureRestAssuredFilter;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -23,6 +24,7 @@ public class DemoWebShopTests extends TestBase {
         String authCookieName = "NOPCOMMERCE.AUTH";
 
         String authCookieValue = given()
+                .filter(AllureRestAssuredFilter.withCustomTemplates())
                 .contentType("application/x-www-form-urlencoded")
                 .cookie(cookieNamePlusValue)
                 .formParam(requestVerificationTokenName, requestVerificationTokenValue)

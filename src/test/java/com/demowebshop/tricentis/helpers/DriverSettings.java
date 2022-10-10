@@ -13,6 +13,7 @@ public class DriverSettings {
 
     public static void configure() {
         Configuration.browser = Project.config.browser();
+        Configuration.browserVersion = Project.config.browserVersion();
         Configuration.browserSize = Project.config.browserSize();
         Configuration.baseUrl = App.config.webUrl();
 

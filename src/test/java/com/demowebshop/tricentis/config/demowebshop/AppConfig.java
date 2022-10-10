@@ -12,4 +12,5 @@ public interface AppConfig extends Config {
     String webUrl();
 
     String apiUrl();
+
 }
