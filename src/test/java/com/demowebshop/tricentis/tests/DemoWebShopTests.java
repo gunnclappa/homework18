@@ -41,7 +41,7 @@ public class DemoWebShopTests extends TestBase {
                 .extract()
                 .cookie(authCookieName);
 
-        open("/Themes/DefaultClean/Content/images/logo.png");
+        open("http://demowebshop.tricentis.com/Themes/DefaultClean/Content/images/logo.png");
         Cookie authCookie = new Cookie(authCookieName, authCookieValue);
         WebDriverRunner.getWebDriver().manage().addCookie(authCookie);
 
