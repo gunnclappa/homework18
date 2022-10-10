@@ -2,7 +2,9 @@ package com.demowebshop.tricentis.pages;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
+import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.Step;
+import org.openqa.selenium.Cookie;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
@@ -49,5 +51,16 @@ public class AuthorizationPage {
 
         return this;
     }
+
+    @Step("Подставляем куки")
+    public AuthorizationPage setCookie(final String authCookieName, final String authCookieValue) {
+        open("/Themes/DefaultClean/Content/images/logo.png");
+        Cookie authCookie = new Cookie(authCookieName, authCookieValue);
+        WebDriverRunner.getWebDriver().manage().addCookie(authCookie);
+
+        return this;
+    }
+
+
 }
 

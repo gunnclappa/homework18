@@ -8,7 +8,7 @@ public class TestData {
             gender = "M",
             firstName = faker.name().firstName(),
             lastName = faker.name().lastName(),
-            email = "MyTestEmailForHomeworkq43@gmail.com",
+            email = "MyTestEmailForHomework45@gmail.com",
             password = "123123",
             requestVerificationTokenName = "__RequestVerificationToken",
             requestVerificationTokenValue = "wQEf6CmG7UqxQUr6YR1yFfL03TmnLm74Gl_L34Nm0p8vWqcR-UjxFi7y6-JuoUO3Ye8nO_EOpDUi62BxtqJsgOcbEkE81gbLe4Z8aQlIRSU1",

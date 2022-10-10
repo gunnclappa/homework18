@@ -1,13 +1,10 @@
 package com.demowebshop.tricentis.tests;
 
-import com.codeborne.selenide.WebDriverRunner;
 import com.demowebshop.tricentis.helpers.AllureRestAssuredFilter;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.Cookie;
 
-import static com.codeborne.selenide.Selenide.open;
 import static com.demowebshop.tricentis.tests.TestData.*;
 import static io.restassured.RestAssured.given;
 
@@ -41,11 +38,8 @@ public class DemoWebShopTests extends TestBase {
                 .extract()
                 .cookie(authCookieName);
 
-        open("http://demowebshop.tricentis.com/Themes/DefaultClean/Content/images/logo.png");
-        Cookie authCookie = new Cookie(authCookieName, authCookieValue);
-        WebDriverRunner.getWebDriver().manage().addCookie(authCookie);
-
         authorizationPage
+                .setCookie(authCookieName, authCookieValue)
                 .checkUserCreated(email)
                 .openCustomerInfo()
                 .checkUserName(firstName)
